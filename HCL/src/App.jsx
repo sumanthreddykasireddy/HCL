@@ -2,7 +2,6 @@ import Landing from './pages/Landing'
 import Services from './pages/Services'
 import AboutUs from './pages/AboutUs'
 import ContactUs from './pages/ContactUs'
-import Home
 import Register from './components/Register'
 import './App.css'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'

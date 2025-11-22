@@ -8,7 +8,7 @@ import Typography from '@mui/material/Typography';
 import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
 import { patientFields, doctorFields } from '../constants/Constants';
 const Register = () => {
-        const [activeTab, setActiveTab] = useState('Patient');
+    const [activeTab, setActiveTab] = useState('Patient');
 
     const [patientData, setPatientData] = useState({
         firstName: '',
