@@ -1,4 +1,5 @@
-import React from "react";
+// ...existing code...
+import React, { useState } from "react";
 import {
   Box,
   Typography,
@@ -11,23 +12,29 @@ import {
   ListItemText,
 } from "@mui/material";
 
-import { useGoals } from "../context/GoalsContext";
-
 export default function WellnessGoals() {
-  const { labels, goals, submittedGoals, updateGoal, submit, reset } = useGoals();
+  const labels = ["Steps", "Sleep", "Heart Rate", "Water Intake"];
+  const initial = ["", "Sleep", "Heart Rate", "Water Intake"]; // Steps kept empty
+
+  const [goals, setGoals] = useState(initial);
+  const [submittedGoals, setSubmittedGoals] = useState(null);
 
   const handleChange = (index) => (e) => {
-    updateGoal(index, e.target.value);
+    const next = [...goals];
+    next[index] = e.target.value;
+    setGoals(next);
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    submit();
+    setSubmittedGoals(goals);
     console.log("Submitted goals:", goals);
+    // TODO: replace console.log with API call if needed
   };
 
   const handleReset = () => {
-    reset();
+    setGoals(initial);
+    setSubmittedGoals(null);
   };
 
   return (

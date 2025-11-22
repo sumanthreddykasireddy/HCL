@@ -1,20 +1,30 @@
-import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import MainLayout from "./components/MainLayout";
-import Dashboard from "./pages/Dashboard";
-import Profile from "./pages/Profile";
-import WellnessGoals from "./pages/WellnessGoals";
-// import Messages from "./pages/Messages";
-import PatientDashboard from './components/features/patientDashboard'
-import DoctorsDashboard from './components/features/DoctorsDashboard'
+import Landing from './pages/Landing'
+import Services from './pages/Services'
+import AboutUs from './pages/AboutUs'
+import ContactUs from './pages/ContactUs'
+import Register from './components/Register'
+import './App.css'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import MainLayout from './components/MainLayout'
 
 function App() {
- return (
+  return (
     <BrowserRouter>
-      <MainLayout />
     
+     <MainLayout/>
+      {/* <Landing /> */}
+      <Routes>
+
+        {/* <Route path="/" element={<div style={{ padding: '1rem' }}><h2>Welcome</h2></div>} />
+        <Route path="/services" element={<Services />} />
+        <Route path="/about" element={<AboutUs />} />
+        <Route path="/contact" element={<ContactUs />} />
+        <Route path='register' element={<Register />} /> */}
+        {/* <Route path = '/' element = {<MainLayout />} /> */}
+        {/* <MainLayout/> */}
+      </Routes>
     </BrowserRouter>
-  );
+  )
 }
 
 export default App;

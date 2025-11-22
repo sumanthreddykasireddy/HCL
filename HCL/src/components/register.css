@@ -1,0 +1,84 @@
+.regis_label{
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    color: #333333;
+    margin-bottom: 8px;
+    width: 100px;
+}
+
+.regis_main{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 10px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    padding: 2rem 1rem;
+    box-sizing: border-box;
+}
+
+.regis_container{
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    align-items: center;
+    margin-bottom: 16px;
+    width: calc(50% - 1rem);
+    box-sizing: border-box;
+}
+
+.regis_field{
+    padding: 12px 16px;
+    border: 1px solid #CCCCCC;
+    border-radius: 4px;
+    font-size: 14px;
+    line-height: 20px;
+    color: #333333;
+    box-sizing: border-box;
+    flex: 1;
+}
+
+@media (max-width: 720px) {
+  .regis_container{
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .regis_label{
+    width: 100%;
+  }
+}
+
+/* Actions / buttons */
+.regis_actions{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  box-sizing: border-box;
+}
+
+.regis_btn{
+  min-width: 160px;
+}
+
+/* Tabs */
+.regis_tabs{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+.regis_tab{
+  border-radius: 24px;
+  padding: 6px 18px;
+  text-transform: none;
+}
+
+@media (max-width: 420px) {
+  .regis_tab{
+    padding: 6px 12px;
+  }
+}

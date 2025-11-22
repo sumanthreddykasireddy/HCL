@@ -76,7 +76,7 @@ export default function SideNav({ mobileOpen, onClose }) {
       </Drawer>
 
       {/* Mobile Drawer */}
-      <Drawer
+      {/* <Drawer
         variant="temporary"
         open={mobileOpen}
         onClose={onClose}
@@ -91,7 +91,7 @@ export default function SideNav({ mobileOpen, onClose }) {
         }}
       >
         {drawerContent}
-      </Drawer>
+      </Drawer> */}
     </>
   );
 }
