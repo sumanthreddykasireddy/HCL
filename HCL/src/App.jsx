@@ -1,34 +1,29 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import PiChart from './common/PiChart'
+import CardOverview from './common/CardOverview'
+import BasicTabs from './common/BasicTabs'
+import CustomTable from './common/CustomTable'
+import PatientDashboard from './components/features/patientDashboard'
+import DoctorsDashboard from './components/features/DoctorsDashboard'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <div>
+    {/* <PiChart data={[
+      { name: 'Steps', value: 400, fill: '#0088FE' },
+      { name: 'Sleep', value: 300, fill: '#00C49F' },
+      { name: 'Calories', value: 300, fill: '#FFBB28' },
+      { name: 'Heart Rate', value: 200, fill: '#FF8042' },
+    ]} />
+    <CardOverview  count={2000} userThreshold={10000} />
+   <BasicTabs />
+   <CustomTable /> */}
+   <PatientDashboard />
+   <DoctorsDashboard />
+    </div>
   )
 }
 
